@@ -27,7 +27,6 @@ App.controller('TaggerInput', ['$scope', '$element', function ($scope, $element)
         if (tags.indexOf(tag) === -1) {
             tags.push(tag);
             $scope.$emit('tagsChange');
-            $scope.$apply();
         }
     }
 
@@ -49,17 +48,17 @@ App.controller('TaggerInput', ['$scope', '$element', function ($scope, $element)
      * If the user presses enter and the value of the input field
      * is truthy, it adds the value as a tag to the stack.
      *
-     * @param e {Object}    event object
+     * @param $event {Object}    event object
      */
-    $element.on('keyup', function (e) {
-        var keyCode = e.keyCode || e.which,
+    $scope.onInputFieldKeyUp = function ($event) {
+        var keyCode = $event.keyCode || $event.which,
             val = $.trim($inputField.val());
 
         if (keyCode === 13 && val) {
             addTag(val);
             $inputField.val('');
         }
-    });
+    };
 
     /**
      * Click listener of the tag's remove button.

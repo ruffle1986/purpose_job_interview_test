@@ -34,7 +34,7 @@
 
         <div id="SearchBoxContainer" ng-controller="TaggerInput">
 
-            <input id="SearchBox" type="text" ng-focus="onSearchInputFocus()" ng-blur="onSearchInputBlur()" />
+            <input id="SearchBox" type="text" ng-keyup="onInputFieldKeyUp($event)" ng-focus="onSearchInputFocus()" ng-blur="onSearchInputBlur()" />
 
             <div class="icon-decor"></div>
 

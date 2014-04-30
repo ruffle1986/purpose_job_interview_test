@@ -1,0 +1,6 @@
+.DS_Store
+components/
+.idea/
+node_modules/
+assets/
+

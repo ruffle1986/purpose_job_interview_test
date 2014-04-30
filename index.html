@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>WE LOVE PORN</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body ng-app="App">
+
+<div id="Application" ng-controller="SearchController">
+
+    <div id="Debugger"></div>
+
+    <header id="Header">
+
+        <div id="Title">
+
+            <div class="title">
+                Welove<span>porn</span>
+            </div>
+
+            <div id="Controls">
+
+                <ul>
+                    <li ng-click="onSearchBoxToggleClick()" class="header-control header-control-search"></li>
+                    <li class="header-control header-control-user"></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div id="SearchBoxContainer" ng-controller="TaggerInput">
+
+            <input id="SearchBox" type="text" ng-focus="onSearchInputFocus()" ng-blur="onSearchInputBlur()" />
+
+            <div class="icon-decor"></div>
+
+            <div id="ClearSearch" ng-click="onCloseSearchBoxBtnClicked()">+</div>
+
+            <ul ng-repeat="tag in tags" class="tag-list">
+                <li class="tag-list-item"><span>{{ tag }}</span> <a href="#" class="tag-list-item-remove" data-value="{{ tag }}" ng-click="onRemoveClick($event)">+</a></li>
+            </ul>
+
+        </div>
+
+    </header>
+
+    <div id="Content">
+
+        <div class="search-result-item">
+            <img src="/images/placeholder.jpg" />
+        </div>
+
+        <div class="search-result-item">
+            <img src="/images/placeholder.jpg" />
+        </div>
+
+        <div class="search-result-item">
+            <img src="/images/placeholder.jpg" />
+        </div>
+
+        <div class="search-result-item">
+            <img src="/images/placeholder.jpg" />
+        </div>
+
+        <div class="search-result-item">
+            <img src="/images/placeholder.jpg" />
+        </div>
+
+        <div class="search-result-item">
+            <img src="/images/placeholder.jpg" />
+        </div>
+
+        <div class="search-result-item">
+            <img src="/images/placeholder.jpg" />
+        </div>
+
+        <div class="search-result-item">
+            <img src="/images/placeholder.jpg" />
+        </div>
+
+        <div class="search-result-item">
+            <img src="/images/placeholder.jpg" />
+        </div>
+
+        <div class="search-result-item">
+            <img src="/images/placeholder.jpg" />
+        </div>
+
+        <div class="search-result-item">
+            <img src="/images/placeholder.jpg" />
+        </div>
+
+        <div class="search-result-item">
+            <img src="/images/placeholder.jpg" />
+        </div>
+
+    </div>
+
+    <footer id="Footer">
+
+        <ul class="menu">
+            <li><a href="#">About</a>|</li>
+            <li><a href="#">Feedback</a>|</li>
+            <li><a href="#">Legal</a>|</li>
+            <li><a href="#">Parental control</a></li>
+        </ul>
+
+        <strong class="copyright">(c) 2014. All Rights Reserved. Weloveporn.co is owned and operated by WLP Software Development (Malta) Limited.</strong>
+
+        <span class="warning">This website contains explicit material. If you are under the age of 18, if such material offends you please leave this site. All models appearing on this website are over the age of 18.</span>
+
+    </footer>
+
+</div>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.15/angular.min.js"></script>
+<script type="text/javascript" src="/js/app.js"></script>
+<script type="text/javascript" src="/js/controllers/SearchController.js"></script>
+<script type="text/javascript" src="/js/controllers/TaggerInput.js"></script>
+
+</body>
+</html>
